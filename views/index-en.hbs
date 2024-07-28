@@ -1,0 +1,221 @@
+<a class="lang" href="es">EN</a>
+
+<header>
+  <img src="images/color-logo-white-text.svg" alt="logo">
+
+  <h1>{{title}}</h1>
+  <p>Developed by <a target="_blank" href="https://www.codinglights.com">Juan Miguel Luces</a></p>
+</header>
+
+<hr>
+
+<h2>
+  Models
+</h2>
+<div class="models">
+  <ul>
+    <li>
+      <h3>Category</h3>
+      <ul>
+        <li>
+          <p>The "Category" model consists of:</p>
+        </li>
+        <li>
+          <strong>id</strong> type <span class="value-nmbr">number</span>
+        </li>
+        <li>
+          <strong>name</strong> type <span class="value-str">string</span>
+        </li>
+        <li>
+          <strong>imageUrl</strong> type <span class="value-str">string</span>
+        </li>
+      </ul>
+      <pre>
+{
+  <span class="key">"id"</span>: <span class="value-nmbr">1</span>,
+  <span class="key">"name"</span>: <span class="value-str">"aperitivos"</span>,
+  <span class="key">"imageUrl"</span>: <span class="value-str">"https://images.pexels.com/photos/4109910/pexels-photo-4109910.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"</span>
+}
+      </pre>
+    </li>
+    <li>
+      <h3>Product</h3>
+      <ul>
+        <li>
+          <p>The "Product" model consists of:
+        </li>
+        <li>
+          <strong>id</strong> type <span class="value-nmbr">number</span>
+        </li>
+        <li>
+          <strong>brand</strong> type <span class="value-str">string</span>
+        </li>
+        <li>
+          <strong>productName</strong> type <span class="value-str">string</span>
+        </li>
+        <li>
+          <strong>imageUrl</strong> type <span class="value-str">string</span> or <span class="value-null">null</span>
+        </li>
+        <li>
+          <strong>price</strong> type <span class="value-nmbr">number</span>
+        </li>
+        <li>
+          <strong>categoryId</strong> type <span class="value-nmbr">number</span>
+        </li>
+        <li>
+          <p><em>*Note that not all products have a value for "imageURL", it may have a value of <span class="value-null">null</span></em></p>
+        </li>
+      </ul>
+      <pre>
+{
+  <span class="key">"id"</span>: <span class="value-nmbr">1</span>,
+  <span class="key">"brand"</span>: <span class="value-str">"Hacendado"</span>,
+  <span class="key">"productName"</span>: <span class="value-str">"Nuez mondada natural"</span>
+  <span class="key">"imageUrl"</span>: <span class="value-str">"https://a0.soysuper.com/beee7db9a319548510525c1329c65522.340.340.0.min.wmark.9a72b730.jpg</span>
+  <span class="key">"price"</span>: <span class="value-nmbr">2.61</span>,
+  <span class="key">"categoryId"</span>: <span class="value-nmbr">1</span>,
+  
+}
+      </pre>
+    </li>
+    <li>
+      <h3>Pages</h3>
+      <ul>
+        <li>
+          <p>Paginated searchs contain:
+        </li>
+        <li>
+          <strong>products</strong> type <span class="value-product">Products Array</span>
+        </li>
+        <li>
+          <strong>maxPages</strong> type <span class="value-nmbr">number</span>
+        </li>
+        <li>
+          <strong>page</strong> type <span class="value-str">string</span>
+        </li>
+        <li>
+          <strong>nextPage</strong> type <span class="value-str">string</span> or <span class="value-null">null</span>
+        </li>
+        <li>
+          <strong>prevPage</strong> type <span class="value-str">string</span></span> or <span
+            class="value-null">null</span>
+        </li>
+        <li>
+          <p>
+            <em>*The properties of <span class="value-str">nextPage</span> and <span class="value-str">prevPage</span>
+              contain the url of the next and previous page, if the url is not available it will contain the value of  <span class="value-null">null</span>
+            </em>
+          </p>
+        </li>
+      </ul>
+      <pre>
+{
+  <span class="key">"products"</span>: <span class="value-product">[ ... ]</span>,
+  <span class="key">"maxPages"</span>: <span class="value-nmbr">219</span>,
+  <span class="key">"page"</span>: <span class="value-str">"1"</span>
+  <span class="key">"nextPage"</span>: <span class="value-str">"http://codinglights-supermarket-api.herokuapp.com/products/page/2"</span>
+  <span class="key">"prevPage"</span>: <span class="value-null">null</span>
+}
+      </pre>
+    </li>
+  </ul>
+</div>
+
+<hr>
+
+<h2>
+  Language
+</h2>
+<div class="languages">
+<p>For the moment, all the results are in <span class="red">Spanish</span>, soon they will be available in English</p>
+</div>
+<hr>
+
+<ul class="get-methods">
+  <li>
+    <h2>All <span class="red">GET</span> Methods</h2>
+  </li>
+  <li>
+    <h3><a target="blank"
+        href="https://codinglights-supermarket-api.herokuapp.com/categories">https://codinglights-supermarket-api.herokuapp.com/categories</a>
+    </h3>
+    <p>Get all product categories</p>
+  </li>
+  <li>
+    <h3><a target="blank"
+        href="https://codinglights-supermarket-api.herokuapp.com/categories/id/1">https://codinglights-supermarket-api.herokuapp.com/categories/id/1</a>
+    </h3>
+    <p>Get category with ID 1</p>
+  </li>
+  <li>
+    <h3><a target="blank"
+        href="https://codinglights-supermarket-api.herokuapp.com/products/page/1">https://codinglights-supermarket-api.herokuapp.com/products/page/1</a>
+    </h3>
+    <p>Get all product *paginated*</p>
+  </li>
+  <li>
+    <h3><a target="blank"
+        href="https://codinglights-supermarket-api.herokuapp.com/products/id/1">https://codinglights-supermarket-api.herokuapp.com/products/id/1</a>
+    </h3>
+    <p>Get product with ID 1</p>
+  </li>
+  <li>
+    <h3><a target="blank"
+        href="https://codinglights-supermarket-api.herokuapp.com/products/category/1/page/1">https://codinglights-supermarket-api.herokuapp.com/products/category/1/page/1</a>
+    </h3>
+    <p>Get all product of category ID 1 *paginated*</p>
+  </li>
+  <li>
+    <h3><a target="blank"
+        href="https://codinglights-supermarket-api.herokuapp.com/products/name/hacendado/page/1">https://codinglights-supermarket-api.herokuapp.com/products/name/hacendado/page/1</a>
+    </h3>
+    <p>Get all product that match product or brand name "hacendado" *paginated*</p>
+  </li>
+  <li>
+    <h3>
+      <a target="blank"
+        href="https://codinglights-supermarket-api.herokuapp.com/products/price/from/1.5/to/2/page/1">https://codinglights-supermarket-api.herokuapp.com/products/price/from/1.5/to/2/page/1</a>
+    </h3>
+    <p>Get all products with price in range of 1.5 to 2 *paginated*</p>
+  </li>
+</ul>
+
+<hr>
+
+<ul class="get-methods">
+  <li>
+    <h2><span class="red">POST</span> METHOD</h2>
+  </li>
+  <li>
+    <p>This filter method can be used to combine many diferent filters, like name, price range and category</p>
+    <p>All the properties of the body are optional and can be of <span class="value-null">null</span> value</p>
+    <h3>
+      <a target="blank" href="https://codinglights-supermarket-api.herokuapp.com/products/page/1">
+        https://codinglights-supermarket-api.herokuapp.com/products/filter/page/1</a>
+    </h3>
+    <p class="content-type">
+      Content-Type: application/json
+    </p>
+    <h3>body:</h3>
+    <pre>
+      {
+        <span class="value-str">"name"</span> : <span class="value-str">string</span>,
+        <span class="value-str">"brand"</span> : <span class="value-str">string</span>,
+        <span class="value-str">"range"</span> : 
+          {
+            <span class="value-str">"from"</span> : <span class="value-nmbr">number</span>,
+            <span class="value-str">"to"</span> : <span class="value-nmbr">number</span>
+          },
+        <span class="value-str">"category"</span> : <span class="value-nmbr">number</span>
+      }
+
+      </pre>
+
+  </li>
+
+</ul>
+
+<hr>
+<footer>
+  <span>copyright &copy; codinglights.com</span>
+</footer>

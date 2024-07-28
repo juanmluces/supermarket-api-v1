@@ -1,0 +1,52 @@
+### CATEGORIES
+# GET ALL CATEGORIES
+# GET http://localhost:3000/categories
+GET http://localhost:3000/categories
+
+###
+# GET ONE CATEGORY BY ID
+# GET http://localhost:3000/categories/id/1
+GET http://localhost:3000/categories/id/1
+
+### PRODUCTS
+# GET ALL PRODUCTS (PAGINATED)
+# GET http://localhost:3000/products/page/1
+GET http://localhost:3000/products/page/1
+
+###
+# GET ONE PRODUCT BY ID
+# GET http://localhost:3000/products/id/1
+GET http://localhost:3000/products/id/1
+
+###
+# GET ALL PRODUCTS BY CATEGORY ID (PAGINATED)
+# GET http://localhost:3000/products/category/1/page/1
+GET http://localhost:3000/products/category/1/page/1
+
+###
+# SEARCH PRODUCTS BY NAME AND BRAND (PAGINATED)
+# GET http://localhost:3000/products/name/bosque verde/page/1
+GET http://localhost:3000/products/name/bosque verde/page/1
+
+###
+# SEARCH PRODUCTS BY PRICE RANGE (PAGINATED)
+# GET http://localhost:3000/products/price/from/1.5/to/2/page/1
+GET http://localhost:3000/products/price/from/1.5/to/2/page/1
+
+
+### NESTED FILTERS
+# POST http://localhost:3000/products/filter/page/1
+POST http://localhost:3000/products/filter/page/1
+Content-Type: application/json
+
+{
+  "name": "",
+  "brand": "",
+  "range": {
+    "from": 2,
+    "to": 2
+  },
+  "category":9
+}
+
+###
