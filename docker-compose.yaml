@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    ports:
+      - 3002:3000
+    command: npm start
+    restart: always
+    environment:
+      DB_HOST: "db"
+      DB_USER: "${DB_USER}"
+      DB_PASSWORD: "${DB_PASSWORD}"
+      PORT: 3000
+      DB_PORT: 3306
+      DB_NAME: "calculatucompra"
+    networks:
+      - calculatucompra-network
+networks:
+  calculatucompra-network:
+    external: true
